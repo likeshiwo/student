@@ -3,22 +3,24 @@
 乱码一出现，怒气直冲天。
 想要事事顺，佛祖来镇楼!
 '''
-#给大家开个玩笑哈!
-import fozu
-fozu.fozu()
+#首先先要创建一个程序员的信仰，MY 佛祖!
+import fzzl
+fzzl.fzzl()
+import time
+import random
 
-#首先创建一个共同可用的列表
+
+#然后创建一个共同可用的列表
 #列表
 l=[]
-
 #打包,还有千万别忘记缩进！！
 def jinru():
 
 #先做出几个大概的方向
-    print('1.办理银行卡:')
-    print('2.向卡内存钱:')
+    print('1.办卡:')
+    print('2.存钱:')
     print('3.查询卡内余额:')
-    print('4.取出卡内余额:')
+    print('4.取钱:')
     print('5.积分兑换:')
     print('6.显示卡内信息')
     print('7.删除银行卡')
@@ -29,8 +31,6 @@ def jinru():
 
 #继续打包，以及缩进!!!
 def banka():
-    import time
-    import random
     #随机一个银行卡号码
     ka=random.randint(100000000000000,999999999999999955)
     dic={}
@@ -94,7 +94,7 @@ def cha():
                 print('')
                 print('姓名:',dic['姓名'])
                 print('账户余额:',dic['账户余额'])
-                print('账户积分:',dic['账户积分'])
+                print('账户积分:%.2f'% dic['账户积分'])
                 print('')
                 print('-'*50)
                 break
@@ -159,7 +159,6 @@ def qu():
         print('-'*50)
 #积分兑换的内容
 def qiang():
-    import time
     print('*'*50)
     print('欢迎使用积分兑换!')
     print('积分为你存入的金钱的:1%!')
@@ -169,7 +168,7 @@ def qiang():
     for dic in l:
         if name == dic['姓名']:
             if passwd == dic['密码']:
-                print('你现在的积分为:',dic['账户积分'])
+                print('你现在的积分为:%.2f'% dic['账户积分'])
                 print('请输入序号，选择要对换的物品:')
                 print('-'*50)
                 print('')
@@ -296,7 +295,7 @@ def liu():
                 print('        姓名:%s''      手机号:%s' % (dic['姓名'],dic['手机号']))
                 print('        性别:%s''       地址:%s' % (dic['性别'],dic['地址']))
                 print('        年龄:%s''       身份证:%s' % (dic['年龄'],dic['身份证']))
-                print('  账户余额:%s''   账户积分:%s' % (dic['账户余额'],dic['账户积分']))
+                print('  账户余额:%s''   账户积分:%.2f' % (dic['账户余额'],dic['账户积分']))
                 print('='*50)
                 break
             else:
@@ -368,5 +367,21 @@ while True:
     #方便自己检查:
     elif choose == 9:
         print(l)
+#嘿嘿！隐藏的猜数游戏!
+    elif choose == 10:
+        import caishu
+        caishu.caishu()
+#乘法表，你们都不知道的选项!
+    elif choose == 11:
+        import shuzi
+        shuzi.shuzi()
+#随机程序，GOGO！
+    elif choose == 12:
+        import suiji
+        suiji.suiji()
+#猜拳游戏,come on
+    elif choose == 13:
+        import caiquan
+        caiquan.caiquan()
     else:
         print('您好!你输入有误!')
